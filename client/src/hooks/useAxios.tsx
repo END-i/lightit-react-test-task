@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
 import services from 'services/api'
 import { getErrors } from 'utils'
@@ -14,14 +14,16 @@ function useAxios<T, C = string>({ apiName, lazyFetch, payload }: Props<C>) {
   const [data, setData] = useState<T>()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  console.log(process.env)
+
   useEffect(() => {
-    if (lazyFetch) return
+    if (lazyFetch) {
+      return
+    }
 
     fetchData()
   }, [apiName, payload])
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true)
     setData(undefined)
     setError('')
@@ -45,7 +47,7 @@ function useAxios<T, C = string>({ apiName, lazyFetch, payload }: Props<C>) {
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
 
   return { fetchData, data, loading, error }
 }

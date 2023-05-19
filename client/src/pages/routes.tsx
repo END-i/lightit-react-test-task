@@ -1,6 +1,5 @@
 import { Suspense, lazy } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import LoadingScreen from 'components/loadingScreen'
 // pages
 const Home = lazy(() => import('./home'))
 
@@ -13,7 +12,7 @@ const router = createBrowserRouter([
 
 export default function Routes() {
   return (
-    <Suspense fallback={<LoadingScreen />}>
+    <Suspense fallback={<>Loading...</>}>
       <RouterProvider router={router} />
     </Suspense>
   )
