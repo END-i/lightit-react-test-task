@@ -1,97 +1,383 @@
+const { randomPrice } = require('./utils')
+
 const database = {
   products: [
-    // Id—идентификаторпродукта
-    // Title—наименованиепродукта •
-    // Image—изображениепродукта •
-    // Text—описаниепродукта
-
+    // id
+    // title
+    // image
+    // text
+    // price
     {
       id: 1,
-      title: 'Porsche Cayenne',
+      title: '718 Cayman',
       text: `
-        The Porsche Cayenne is a series of luxury SUV manufactured by the German company Porsche since 2002. The first generation was known internally within Porsche as the Type 9PA or E1. It is the first V8-engined vehicle built by Porsche since 1995, when the Porsche 928 was discontinued. It is also Porsche's first off-road variant vehicle since its Super and Junior tractors of the 1950s, and the first Porsche with four doors. Since 2014, the Cayenne has been sold alongside a smaller Porsche SUV, the Macan.
-        The second-generation Cayenne (Type 92A or E2) was unveiled at the 2010 Geneva Motor Show in March. The Cayenne shares its platform, body frame, doors and electronics with the similar Volkswagen Touareg and Audi Q7. It received a facelift in 2014 with minor external changes, and introduced a new plug-in E-Hybrid version, with its public launch at the Paris Motor Show.[1] Since 2008, all engines have featured direct injection technology. The third generation (Type PO536) was unveiled in 2017 at Stuttgart.
-        The Cayenne is the first Porsche assembled outside of Europe, in Kulim, Kedah, Malaysia. Only the base model 3.0-litre V6 is assembled in Malaysia, while other models are imported from Slovakia.
+        718 Cayman (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 9,7 – 8,9 l/100 km
+        CO2-emissions combined (WLTP): 220 – 201 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
       `,
-      image: 'image1.png',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (1).webp',
     },
     {
       id: 2,
-      title: 'Porsche 911',
+      title: '718 Boxster',
       text: `
-        The Porsche 911 (pronounced Nine Eleven or in German: Neunelfer) is a two-door 2+2 high performance rear-engined sports car introduced in September 1964 by Porsche AG of Stuttgart, Germany. It has a rear-mounted flat-six engine and originally a torsion bar suspension. The car has been continuously enhanced through the years but the basic concept has remained unchanged.[1] The engines were air-cooled until the introduction of the 996 series in 1998.[2][3]
-        The 911 has been raced extensively by private and factory teams, in a variety of classes. It is among the most successful competition cars. In the mid-1970s, the naturally aspirated 911 Carrera RSR won world championship races including Targa Florio and the 24 Hours of Daytona. The 911-derived 935 turbo also won the 24 Hours of Le Mans in 1979. Porsche won the World Championship for Makes in 1976, 1977, 1978, and 1979 with 911-derived models.
-        In a 1999 poll to determine the Car of the Century, the 911 was fifth.[4] It is one of two in the top five that had remained continuously in production (the original Beetle remained in production until 2003).[5] The one millionth example was manufactured in May 2017 and is in the company's permanent collection.
+        718 Boxster (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 9,7 – 8,9 l/100 km
+        CO2-emissions combined (WLTP): 220 – 201 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
       `,
-      image: 'image2.jpeg',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (2).webp',
     },
     {
       id: 3,
-      title: 'Porsche 930',
+      title: '718 Cayman Style Edition',
       text: `
-        The Porsche 930 is the internal designation for the turbocharged variant of the 911 model manufactured by German automobile manufacturer Porsche between 1975 and 1989. It was the maker's top-of-the-range 911 model for its entire production duration and, at the time of its introduction, was the fastest production car available in Germany.[3][4][5]
-        Porsche began experimenting with turbocharging technology on their race cars during the late 1960s, and in 1972 began development on a turbocharged version of the 911. Porsche originally needed to produce the car in order to comply with homologation regulations and had intended on marketing it as a street legal race vehicle like the 1973 Carrera 2.7 RS. The FIA's Appendix "J” rules upon which the 911 Turbo Carrera RSR 2.1 was entered into competition in 1974 changed in 1975 and 1976. The FIA announced that cars for Group 4 and Group 5 had to be production cars and be available for sale to individual purchasers through manufacturer dealer networks. For the 1976 season, new FIA regulations required manufacturers to produce 400 cars within a twenty-four-month period to gain approval for Group 4. Group 5 would require the car to be derived from a homologated model in Group 3 or 4. Porsche's Group 4 entry was the 934, homologated on 6 December 1975. For Group 5, Porsche would develop one of the most successful racing cars of the time, the 935. The 911 Turbo was put into production in 1975. While the original purpose of the 911 Turbo was to gain homologation for the 1976 racing season, it quickly became popular among car enthusiasts. Four hundred cars were produced by the end of 1975.[citation needed] Since Porsche wanted to compete in the 1976 season, they gained FIA homologation for the Porsche Turbo for Group 4 in Nr. 645 on 6 December 1975 and the 1,000th 911 Turbo was completed on 5 May 1976.
+        718 Cayman Style Edition (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 9,7 – 8,9 l/100 km
+        CO2-emissions combined (WLTP): 219 – 202 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
       `,
-      image: 'image3.jpeg',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (3).webp',
     },
     {
       id: 4,
-      title: 'Porsche Taycan',
+      title: '718 Boxster Style Edition',
       text: `
-        The Porsche Taycan is a battery electric saloon and shooting brake produced by German automobile manufacturer Porsche. The concept version of the Taycan, named the Porsche Mission E, debuted at the 2015 Frankfurt Motor Show.[5] The Taycan was revealed fully production-ready at the 2019 Frankfurt Motor Show.[4] As Porsche's first series production electric car,[5] it is sold in several variants at different performance levels, and may spawn further derivatives in future models.[6] More than 20,000 Taycans were delivered in 2020, its debut sale year, representing 7.4% of the total Porsche volume.[7] A modified Taycan Turbo S is the current Formula E Safety car.[8]
-        Nomenclature
-        The name "Taycan" (/taɪ-kɒn/[9]) roughly translates from Turkish tay+can as "lively young horse", in reference to the steed of the Stuttgart coat of arms on the Porsche crest.[10][11]
-        Porsche named the high performance models Turbo and Turbo S despite the absence of a turbocharger, following the tradition set by high performance Porsche derivatives with internal combustion engines
+        718 Boxster Style Edition (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 9,7 – 9,0 l/100 km
+        CO2-emissions combined (WLTP): 220 – 203 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
       `,
-      image: 'image4.jpeg',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (4).webp',
     },
     {
       id: 5,
-      title: 'Porsche 918 Spyder',
+      title: '718 Cayman S',
       text: `
-        The Porsche 918 Spyder is a sports car manufactured by German marque Porsche.[5] The 918 Spyder is a plug-in hybrid powered by a mid-mounted naturally aspirated 4.6 L (4,593 cc) V8 engine, developing 447 kW (608 PS; 599 hp) at 8,700 RPM, with two electric motors delivering an additional 210 kW (286 PS; 282 hp) for a combined output of 652 kW (875 hp) and 1,280 N⋅m (944 lbf⋅ft) of torque.[6][7] The 918 Spyder's 6.8 kWh lithium-ion battery pack delivers an all-electric range of 19 km (12 mi) under the US Environmental Protection Agency's five-cycle tests.[2]
-        Production began on 18 September 2013, with deliveries initially scheduled to begin in December 2013, and a starting price of ≈€781,000 (US$845,000 or £711,000).[8][9][10] The 918 Spyder was sold out in December 2014 and production ended in June 2015.[11]
-        The 918 Spyder was first shown as a concept at the 80th Geneva Motor Show in March 2010.[8] On 28 July 2010, after 2,000 declarations of interest, the supervisory board of Porsche AG approved series development of the 918 Spyder.[12] The production version was unveiled at the September 2013 Frankfurt Motor Show.[13] Porsche also unveiled the RSR racing variant of the 918 at the 2011 North American International Auto Show, which combines hybrid technology first used in the 997 GT3 R Hybrid, with styling from the 918 Spyder.[14] However, the 918 RSR didn't make it to production. The 918 Spyder was the second plug-in hybrid car manufactured by Porsche, after the 2014 Panamera S E-Hybrid.[15]
+        718 Cayman S (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 10,3 – 9,6 l/100 km
+        CO2-emissions combined (WLTP): 235 – 217 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
       `,
-      image: 'image5.jpeg',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (5).webp',
     },
-    
+    {
+      id: 6,
+      title: '718 Boxster S',
+      text: `
+        718 Boxster S (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 10,4 – 9,6 l/100 km
+        CO2-emissions combined (WLTP): 235 – 218 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
+      `,
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (6).webp',
+    },
+    {
+      id: 7,
+      title: '718 Cayman GTS 4.0',
+      text: `
+        718 Cayman GTS 4.0 (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 10,9 – 10,1 l/100 km
+        CO2-emissions combined (WLTP): 247 – 230 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
+      `,
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (7).webp',
+    },
+    {
+      id: 8,
+      title: '718 Boxster GTS 4.0',
+      text: `
+        718 Boxster GTS 4.0 (WLTP)*
+        Consumption/Emissions WLTP*
+        Fuel consumption combined: 10,9 – 10,1 l/100 km
+        CO2-emissions combined (WLTP): 247 – 230 g/km
+        718 Concept.
+        The 718 models were made for the sport of it. They are mid-engined roadsters that unite the sporting spirit of the legendary Porsche 718 with the sports car of tomorrow – and transfer it to the roads of today’s world. With one goal: to take the everyday out of every day.
+      `,
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (8).webp',
+    },
+
+    {
+      id: 9,
+      title: '718 Cayman GT4',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (9).webp',
+    },
+    {
+      id: 10,
+      title: '718 Spyder',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (10).webp',
+    },
+    {
+      id: 11,
+      title: '718 Cayman GT4 RS',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (11).webp',
+    },
+    {
+      id: 12,
+      title: '718 Spyder RS',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (12).webp',
+    },
+    {
+      id: 13,
+      title: '911 Carrera',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (13).webp',
+    },
+    {
+      id: 14,
+      title: '911 Carrera T',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (14).webp',
+    },
+    {
+      id: 15,
+      title: '911 Carrera Cabriolet',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (15).webp',
+    },
+    {
+      id: 16,
+      title: '911 Carrera 4',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (16).webp',
+    },
+    {
+      id: 17,
+      title: '911 Carrera 4 Cabriolet',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (17).webp',
+    },
+    {
+      id: 18,
+      title: '911 Carrera S',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (18).webp',
+    },
+    {
+      id: 19,
+      title: '911 Carrera S Cabriolet',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (19).webp',
+    },
+    {
+      id: 20,
+      title: '911 Carrera 4S',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (20).webp',
+    },
+    {
+      id: 21,
+      title: '911 Carrera 4S Cabriolet',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (21).webp',
+    },
+    {
+      id: 22,
+      title: '911 Targa 4',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (22).webp',
+    },
+    {
+      id: 23,
+      title: '911 Targa 4S',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (23).webp',
+    },
+    {
+      id: 24,
+      title: '911 Carrera GTS',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (24).webp',
+    },
+    {
+      id: 25,
+      title: '911 Carrera GTS Cabriolet',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (25).webp',
+    },
+    {
+      id: 26,
+      title: '911 Carrera 4 GTS',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (26).webp',
+    },
+    {
+      id: 27,
+      title: '911 Carrera 4 GTS Cabriolet',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (27).webp',
+    },
+    {
+      id: 28,
+      title: '911 Targa 4 GTS',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (28).webp',
+    },
+    {
+      id: 29,
+      title: '911 Edition 50 Years Porsche Design',
+      text: '',
+      price: randomPrice(10000, 200000),
+      image: 'porsche-thumbwhite (29).webp',
+    },
   ],
   comments: [
-    // Id—идентификаторотзыва
-    // Rate—оценка
-    // Text—комментарий
-    // Id_user—идентификаторпользователя
-    // Id_entry—идентификаторпродукта
-    { id: 1, productId: 1, text: 'Comment 1', userId: 1, rate: 4 },
-    { id: 2, productId: 1, text: 'Comment 2', userId: 2, rate: 3 },
-    { id: 3, productId: 2, text: 'Comment 3', userId: 1, rate: 5 },
-    { id: 4, productId: 3, text: 'Comment 4', userId: 3, rate: 2 },
-  ],
-  users: [
-    //  Id—идентификаторпользователя
-    //  Username—имяпользователя
-    //  Password—пароль
+    // id: number
+    // productId: string
+    // text: string
+    // userId: number
+    // rate: number
+    // createdBy: {
+    //    id: number
+    //    firstName: string
+    //    lastName: string
+    //    username: string
+    //    email: string
+    //    password: string
+    // }
+    // createdAt: Date
     {
       id: 1,
-      name: 'User 1',
-      password: 'password1',
+      productId: 1,
+      text: "Nice car, but it doesn't break down at all! So I went back to my Lanos. At least some reason to hang out with the guys in the garages.",
+      userId: 1,
+      rate: 3,
+      createdBy: {
+        id: 1,
+        firstName: 'Harrison',
+        lastName: 'Ford',
+        username: 'Harrison Ford',
+        email: 'harri@ford.mail.ua',
+        password: 'password',
+      },
+      createdAt: new Date('Mar 20, 2022, 14:54'),
     },
     {
       id: 2,
-      name: 'User 2',
-      email: 'user2@example.com',
-      password: 'password2',
+      productId: 1,
+      text: 'Good car, buuuut the trunk is small. In the morning, when I go to trade at the market, I can hardly fit sacks of potatoes.',
+      userId: 2,
+      rate: 1,
+      createdBy: {
+        id: 2,
+        firstName: 'Liam',
+        lastName: 'Neeson',
+        username: 'Liam Neeson',
+        email: 'liam@neeson.mail.com',
+        password: 'password',
+      },
+      createdAt: new Date('Feb 8, 2021, 20:27'),
     },
     {
       id: 3,
-      name: 'User 3',
-      email: 'user3@example.com',
-      password: 'password3',
+      productId: 2,
+      text: "I love this car. But I can't go further than my neighborhood, because it can't handle potholes very well.",
+      userId: 1,
+      rate: 5,
+      createdBy: {
+        id: 1,
+        firstName: 'Harrison',
+        lastName: 'Ford',
+        username: 'Harrison Ford',
+        email: 'harri@ford.mail.ua',
+      },
+      createdAt: new Date('Jan 10, 2020, 12:04'),
     },
     {
       id: 4,
-      name: 'admin',
+      productId: 3,
+      text: `Magna aliquip ad id elit reprehenderit nisi proident deserunt adipisicing aliquip exercitation. Fugiat sunt deserunt incididunt sint aute magna esse id do culpa ipsum anim dolor pariatur. Aliqua sunt laborum duis aute fugiat est laboris id tempor. Commodo sunt ipsum non elit mollit nulla eu laborum nisi elit Lorem. Officia voluptate consectetur velit labore. Dolor consequat excepteur mollit excepteur commodo eu veniam consequat aliquip laboris anim eu.
+        Duis reprehenderit proident proident adipisicing Lorem ullamco deserunt laborum cillum magna. Incididunt dolore irure voluptate minim proident cillum. Ea officia nostrud ipsum dolor sunt velit commodo dolore irure labore veniam qui. Esse eu ipsum et ipsum ullamco nisi exercitation qui voluptate irure ullamco sit ullamco. Ut consectetur non pariatur tempor sunt nisi Lorem cillum. Officia cupidatat esse anim irure consequat est mollit.
+        Duis ullamco occaecat elit dolore proident sunt in id minim duis reprehenderit excepteur Lorem. Proident officia non consectetur velit. Lorem sint tempor anim commodo. Consectetur commodo mollit amet irure consectetur incididunt ea. Lorem deserunt sunt nostrud culpa. Est laborum non labore sunt sit consectetur nostrud nisi tempor.
+        Occaecat sint duis laborum incididunt non et. Minim veniam occaecat aliqua ipsum tempor excepteur officia fugiat aliqua et ipsum velit aute occaecat. Nulla elit aute aute mollit ex nostrud esse officia ex consequat. Eiusmod enim pariatur laboris eu nulla duis deserunt labore qui nisi laborum. Voluptate velit proident commodo mollit ea. Incididunt anim laboris fugiat ullamco ut non aliqua esse do amet ut tempor ea.`,
+      userId: 3,
+      rate: 5,
+      createdBy: {
+        id: 3,
+        name: 'Gary Oldman',
+        email: 'garry@oldman.com',
+      },
+      createdAt: new Date('Dec 31, 2019, 10:21'),
+    },
+  ],
+  users: [
+    {
+      id: 1,
+      firstName: 'Harrison',
+      lastName: 'Ford',
+      username: 'Harrison Ford',
+      email: 'harri@ford.mail.ua',
+      password: 'password',
+    },
+    {
+      id: 2,
+      firstName: 'Liam',
+      lastName: 'Neeson',
+      username: 'Liam Neeson',
+      email: 'liam@neeson.mail.com',
+      password: 'password',
+    },
+    {
+      id: 3,
+      firstName: 'Gary',
+      lastName: 'Oldman',
+      username: 'Gary Oldman',
+      email: 'garry@oldman.com',
+      password: 'password',
+    },
+    {
+      id: 4,
+      firstName: 'Super',
+      lastName: 'Admin',
+      username: 'admin',
+      email: 'admin@admin.mail.com',
       password: 'admin',
     },
   ],

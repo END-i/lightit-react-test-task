@@ -1,0 +1,22 @@
+.header {
+  background-color: $deadrusian;
+  color: $white;
+  padding: 0 50px;
+
+  .header-layout {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    .logo {
+      height: 45px;
+      cursor: pointer;
+    }
+    .actions {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "lightit-react-test-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:END-i/lightit-react-test-task.git",
+  "author": "END-i <evgeniy.donev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "cd ./server && yarn run:livereload --ignore client",
+    "client": "cd ./client && yarn start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

@@ -1,19 +1,35 @@
 import { Suspense, lazy } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from 'components/layout'
+import NotFound from './notFound'
 // pages
 const Home = lazy(() => import('./home'))
+const Details = lazy(() => import('./details'))
 
-const router = createBrowserRouter([
+const routers = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />,
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/product/:id',
+        element: <Details />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
+      },
+    ],
   },
 ])
 
 export default function Routes() {
   return (
     <Suspense fallback={<>Loading...</>}>
-      <RouterProvider router={router} />
+      <RouterProvider router={routers} />
     </Suspense>
   )
 }

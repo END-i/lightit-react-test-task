@@ -7,9 +7,7 @@ export default function Loader({ children, isLoading }: Props) {
 
   return (
     <>
-      <div
-        className={`loading-page-wrapper ${isLoading ? 'show' : ''} ${isLoading ? 'visible' : ''}`}
-      >
+      <div className={`loading-page-wrapper ${isLoading ? 'show' : ''}`}>
         {lettersArray.map((letter, idx) => (
           <span key={idx}>{letter}</span>
         ))}

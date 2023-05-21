@@ -1,0 +1,15 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .content-layout {
+    max-width: 1200px;
+    margin: auto;
+    overflow: auto;
+    height: 100%;
+    flex-grow: 1;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+}

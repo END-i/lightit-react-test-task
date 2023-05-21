@@ -3,5 +3,15 @@
 
 // Components
 @import 'components/loading';
+@import 'components/header';
+@import 'components/layout';
+@import 'components/footer';
+@import 'components/back-button';
+@import 'components/comments';
+@import 'components/item-details';
+@import 'components/product-card';
 
 // Pages
+@import 'pages/home';
+@import 'pages/details';
+@import 'pages/not-found';

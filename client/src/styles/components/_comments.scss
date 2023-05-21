@@ -1,0 +1,19 @@
+.comments {
+  .comment-block {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      margin-bottom: 0;
+    }
+    small {
+      color: $raven;
+      font-size: 12px;
+    }
+    p {
+      white-space: pre-line;
+      font-weight: 300;
+      line-height: 25px;
+      margin: 0;
+    }
+  }
+}

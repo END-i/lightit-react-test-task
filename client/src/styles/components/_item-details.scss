@@ -1,0 +1,24 @@
+.item-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 15px;
+
+  .product-image {
+    width: 100%;
+  }
+
+  .product-name {
+    color: $deadrusian;
+  }
+  .price {
+    color: $smokeTree;
+    font-size: 1.5rem;
+    margin: 10px;
+    font-weight: 500;
+  }
+  .description {
+    white-space: pre-line;
+    font-weight: 300;
+    line-height: 25px;
+  }
+}

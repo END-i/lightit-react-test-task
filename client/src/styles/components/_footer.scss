@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border-top: 1px solid $deadrusian;
+  margin: 0 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 0.875rem;
+  gap: 10px;
+}

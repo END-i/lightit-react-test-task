@@ -1,30 +1,31 @@
 export interface Product {
   id: number
-  img: string
+  image: string
   text: string
   title: string
+  price: number
 }
 
 export type Products = Product[]
 
 export interface CreatedBy {
   email: string
-  first_name: string
+  firstName: string
   id: number
-  last_name: string
+  lastName: string
   username: string
 }
-export interface Comment {
-  created_at: string
-  created_by: CreatedBy
+export interface IReview {
+  createdAt: string
+  createdBy: CreatedBy
   id: number
-  product: number
+  productId: number
   rate: number
   text: string
 }
-export type Comments = Comment[]
+export type IReviews = IReview[]
 
-export interface ChangedComment {
+export interface ChangedReview {
   id: number
   username: string
   text: string
@@ -42,22 +43,22 @@ export interface AuthResponse {
   message?: string
 }
 
-export interface AddCommentResponse {
+export interface AddReviewResponse {
   success: boolean
 }
 
-export interface NewComment {
+export interface NewReview {
   rate: number
   text: string
 }
 
-export interface AddCommentPayload extends NewComment {
+export interface AddReviewPayload extends NewReview {
   product_id: string
 }
 
 export type Favorites = {
   product: Product
-  comments: ChangedComment
+  comments: ChangedReview
 }[]
 
 export interface IProfile {
@@ -79,11 +80,9 @@ export interface IGetProducts {
   method: string
   url: string
 }
-export interface IGetComments {
-  method: string
-  url: string
-}
-export interface IAddComment {
+export type IGetProductDetails = IGetProducts
+export type IGetReviews = IGetProducts
+export interface IAddReview {
   method: string
   url: string
   data: {
@@ -91,8 +90,8 @@ export interface IAddComment {
     text: string
   }
 }
-export interface IComment {
-  productId: string
+export interface IReview {
+  productId: number
   rate: number
   text: string
 }
@@ -107,20 +106,20 @@ export interface ILogin {
   data: AuthRequest
 }
 
-export type APItypes = IGetProducts | IGetComments | IAddComment | IRegistration | ILogin
+export type APItypes = IGetProducts | IGetReviews | IAddReview | IRegistration | ILogin
 
 export enum ServiceNames {
   getProducts,
-  getComments,
-  addComment,
+  getReviews,
+  addReview,
   register,
   login,
 }
 
 export interface IServices {
   [ServiceNames.getProducts]: () => IGetProducts
-  [ServiceNames.getComments]: (productId: string) => IGetComments
-  [ServiceNames.addComment]: (props: IComment) => IAddComment
+  [ServiceNames.getReviews]: (productId: string) => IGetReviews
+  [ServiceNames.addReview]: (props: IReview) => IAddReview
   [ServiceNames.register]: (props: AuthRequest) => IRegistration
   [ServiceNames.login]: (payload: AuthRequest) => ILogin
 }

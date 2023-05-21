@@ -23,7 +23,7 @@ function useAxios<T, C = string>({ apiName, lazyFetch, payload }: Props<C>) {
     fetchData()
   }, [apiName, payload])
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async <P,>(payloadProps?: P) => {
     setLoading(true)
     setData(undefined)
     setError('')
@@ -35,7 +35,7 @@ function useAxios<T, C = string>({ apiName, lazyFetch, payload }: Props<C>) {
         throw new Error('Error! Api not found')
       }
 
-      const { status, statusText, ...rest } = await axios(request(payload))
+      const { status, statusText, ...rest } = await axios(request(payloadProps || payload))
 
       if (status < 200 && status > 300) {
         throw new Error(`Status: ${status}. ${statusText}`) // TODO: check this msg

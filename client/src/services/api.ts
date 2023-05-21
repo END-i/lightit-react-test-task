@@ -1,32 +1,39 @@
 import type {
   AuthRequest,
-  IAddComment,
-  IComment,
-  IGetComments,
+  IAddReview,
+  IReview,
+  IGetReviews,
   IGetProducts,
+  IGetProductDetails,
   ILogin,
   IRegistration,
-  IServices,
 } from 'types'
 
 function getProducts(): IGetProducts {
   return {
     method: 'get',
-    url: 'api/products',
+    url: 'products',
   }
 }
 
-function getComments(productId: string): IGetComments {
+function getProductDetails(id: string): IGetProductDetails {
   return {
     method: 'get',
-    url: `api/reviews/${productId}`,
+    url: `products/${id}`,
   }
 }
 
-function addComment({ productId, rate, text }: IComment): IAddComment {
+function getReviews(productId: string): IGetReviews {
+  return {
+    method: 'get',
+    url: `products/${productId}/comments`,
+  }
+}
+
+function addReview({ productId, rate, text }: IReview): IAddReview {
   return {
     method: 'post',
-    url: `api/reviews/${productId}`,
+    url: `reviews/${productId}`,
     data: {
       rate,
       text,
@@ -37,7 +44,7 @@ function addComment({ productId, rate, text }: IComment): IAddComment {
 function register(payload: AuthRequest): IRegistration {
   return {
     method: 'post',
-    url: 'api/register/',
+    url: 'register/',
     data: payload,
   }
 }
@@ -45,17 +52,20 @@ function register(payload: AuthRequest): IRegistration {
 function login(payload: AuthRequest): ILogin {
   return {
     method: 'post',
-    url: 'api/login/',
+    url: 'login/',
     data: payload,
   }
 }
 
 const services: any = {
   getProducts,
-  getComments,
-  addComment,
+  getProductDetails,
+  getReviews,
+  addReview,
   register,
   login,
 }
+
+export const imageBaseUrl = process.env.REACT_APP_IMAGE_BASE_URL
 
 export default services
